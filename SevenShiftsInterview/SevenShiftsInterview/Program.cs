@@ -139,7 +139,7 @@ namespace SevenShiftsInterview
             //Allow for multiple delimiters
             bool case1 = (Add("//;;;,:::\n1771;;;1:::3;;;4;;;1772:::3000") == 8);
             
-            //Test mixed symbol multiple delimiters
+            //Test mixed symbol multiple delimiters Which is also Bonus Question 4
             bool case2 = (Add("//.+.=:,$%,#@\n1999.+.=:1.+.=:3$%4.+.=:1998#@9000") == 8);
             
             if(!case1){throw new Exception("Bonus1 case1 failed");}
