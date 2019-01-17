@@ -113,8 +113,10 @@ namespace SevenShiftsInterview
             bool case1 = (Add("//;\n1001;1;3;4;1002;3000") == 8);
             
             //1000 should still count
-            bool case2 = (Add("//j\n1j3j4;1000;1001") == 1008);
+            bool case2 = (Add("//j\n1j3j4j1000j1001") == 1008);
             
+            if(!case1){throw new Exception("Bonus1 case1 failed");}
+            if(!case2){throw new Exception("Bonus1 case2 failed");}
         }
         private static int Add(string numbers)
         {
@@ -154,6 +156,7 @@ namespace SevenShiftsInterview
             
             for (;index < individualNumbers.Length; index++)
             {
+                
                 string num = individualNumbers[index];
                 int interpreted = int.Parse(num);
                 sum += interpreted;
