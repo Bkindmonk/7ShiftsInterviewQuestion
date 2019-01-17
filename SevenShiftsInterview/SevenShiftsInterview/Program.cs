@@ -13,6 +13,7 @@ namespace SevenShiftsInterview
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                
             }
         }
         
@@ -30,13 +31,30 @@ namespace SevenShiftsInterview
             //Testing single number strings
             bool case4 = (Add("500") == 500);
 
-            if(!case1){throw new Exception("case1 failed");}
-            if(!case2){throw new Exception("case2 failed");}
-            if(!case3){throw new Exception("case3 failed");}
-            if(!case4){throw new Exception("case4 failed");}
+            if(!case1){throw new Exception("Test1 case1 failed");}
+            if(!case2){throw new Exception("Test1 case2 failed");}
+            if(!case3){throw new Exception("Test1 case3 failed");}
+            if(!case4){throw new Exception("Test1 case4 failed");}
         }
-        private static int Add(string numbers){
-            return -1;
+        
+        private static int Add(string numbers)
+        {
+            //Empty strings should return 0
+            if (string.IsNullOrEmpty(numbers))
+            {
+                return 0;
+            }
+            
+            int sum = 0;
+            
+            string[] individualNumbers = numbers.Split(',');
+            
+            foreach (string num in individualNumbers)
+            {
+                int interpreted = int.Parse(num);
+                sum += interpreted;
+            }
+            return sum;
         }
     }
 }
