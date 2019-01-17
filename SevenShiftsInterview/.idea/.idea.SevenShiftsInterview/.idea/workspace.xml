@@ -16,14 +16,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SevenShiftsInterview/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state relative-caret-position="350">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding>
-                <marker date="1547693986296" expanded="true" signature="30:300" ph="{...}" />
-                <marker date="1547693986296" expanded="true" signature="59:298" ph="{...}" />
-                <marker date="1547693986296" expanded="true" signature="112:132" ph="{...}" />
-                <marker date="1547693986296" expanded="true" signature="181:218" ph="{...}" />
-                <marker date="1547693986296" expanded="true" signature="258:292" ph="{...}" />
+                <marker date="1547694496710" expanded="true" signature="45:1160" ph="{...}" />
+                <marker date="1547694496710" expanded="true" signature="74:1158" ph="{...}" />
+                <marker date="1547694496710" expanded="true" signature="127:333" ph="{...}" />
+                <marker date="1547694496710" expanded="true" signature="153:217" ph="{...}" />
+                <marker date="1547694496710" expanded="true" signature="249:323" ph="{...}" />
+                <marker date="1547694496710" expanded="true" signature="398:1071" ph="{...}" />
+                <marker date="1547694496710" expanded="true" signature="1118:1152" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -98,19 +100,19 @@
   </component>
   <component name="RunManager">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/SevenShiftsInterview/bin/Debug/SevenShiftsInterview.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SevenShiftsInterview/bin/Debug" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/SevenShiftsInterview/SevenShiftsInterview.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="None" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.6.2" />
       <method v="2">
         <option name="Build" enabled="true" />
       </method>
@@ -126,12 +128,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547693689515</updated>
-      <workItem from="1547693692067" duration="294000" />
+      <workItem from="1547693692067" duration="804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294000" />
+    <option name="totallyTimeSpent" value="804000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -149,7 +151,7 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.51859957" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.51859957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -193,14 +195,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/SevenShiftsInterview/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        <state relative-caret-position="350">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
           <folding>
-            <marker date="1547693986296" expanded="true" signature="30:300" ph="{...}" />
-            <marker date="1547693986296" expanded="true" signature="59:298" ph="{...}" />
-            <marker date="1547693986296" expanded="true" signature="112:132" ph="{...}" />
-            <marker date="1547693986296" expanded="true" signature="181:218" ph="{...}" />
-            <marker date="1547693986296" expanded="true" signature="258:292" ph="{...}" />
+            <marker date="1547694496710" expanded="true" signature="45:1160" ph="{...}" />
+            <marker date="1547694496710" expanded="true" signature="74:1158" ph="{...}" />
+            <marker date="1547694496710" expanded="true" signature="127:333" ph="{...}" />
+            <marker date="1547694496710" expanded="true" signature="153:217" ph="{...}" />
+            <marker date="1547694496710" expanded="true" signature="249:323" ph="{...}" />
+            <marker date="1547694496710" expanded="true" signature="398:1071" ph="{...}" />
+            <marker date="1547694496710" expanded="true" signature="1118:1152" ph="{...}" />
           </folding>
         </state>
       </provider>

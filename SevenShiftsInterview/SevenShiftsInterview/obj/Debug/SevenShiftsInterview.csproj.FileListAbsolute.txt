@@ -1,0 +1,6 @@
+E:\bashPlayground\7ShiftsInterviewQuestion\SevenShiftsInterview\SevenShiftsInterview\bin\Debug\SevenShiftsInterview.exe
+E:\bashPlayground\7ShiftsInterviewQuestion\SevenShiftsInterview\SevenShiftsInterview\bin\Debug\SevenShiftsInterview.pdb
+E:\bashPlayground\7ShiftsInterviewQuestion\SevenShiftsInterview\SevenShiftsInterview\obj\Debug\SevenShiftsInterview.csprojAssemblyReference.cache
+E:\bashPlayground\7ShiftsInterviewQuestion\SevenShiftsInterview\SevenShiftsInterview\obj\Debug\SevenShiftsInterview.csproj.CoreCompileInputs.cache
+E:\bashPlayground\7ShiftsInterviewQuestion\SevenShiftsInterview\SevenShiftsInterview\obj\Debug\SevenShiftsInterview.exe
+E:\bashPlayground\7ShiftsInterviewQuestion\SevenShiftsInterview\SevenShiftsInterview\obj\Debug\SevenShiftsInterview.pdb
