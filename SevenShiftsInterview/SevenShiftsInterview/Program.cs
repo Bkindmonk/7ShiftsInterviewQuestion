@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SevenShiftsInterview
 {
@@ -127,7 +128,7 @@ namespace SevenShiftsInterview
             bool case1 = (Add("//;;;\n1001;;;1;;;3;;;4;;;1002;;;3000") == 8);
             
             //Testing mixed symbols delimiter
-            bool case2 = (Add("//.+.=:\n1001.+.=:1.+.=:3.+.=:4.+.=:1002.+.=:3000") == 8);
+            bool case2 = (Add("//.+.=:\n1001.+.=:1.+.=:3.+.=:4.+.=:1002.+.=:3009") == 8);
             
             if(!case1){throw new Exception("Bonus1 case1 failed");}
             if(!case2){throw new Exception("Bonus1 case2 failed");}
@@ -136,10 +137,10 @@ namespace SevenShiftsInterview
         private static void TestAddBonus3()
         {
             //Allow for multiple delimiters
-            bool case1 = (Add("//;;;,:::\n1001;;;1:::3;;;4;;;1002:::3000") == 8);
+            bool case1 = (Add("//;;;,:::\n1771;;;1:::3;;;4;;;1772:::3000") == 8);
             
             //Test mixed symbol multiple delimiters
-            bool case2 = (Add("//.+.=:,$%,#@\n1001.+.=:1;;;3$%4;;;1002#@3000") == 8);
+            bool case2 = (Add("//.+.=:,$%,#@\n1999.+.=:1.+.=:3$%4.+.=:1998#@9000") == 8);
             
             if(!case1){throw new Exception("Bonus1 case1 failed");}
             if(!case2){throw new Exception("Bonus1 case2 failed");}
@@ -154,28 +155,33 @@ namespace SevenShiftsInterview
             
             int sum = 0;
             //default delimiter is comma
-            string[] delimiter = new string[] {","};
+            string[] delimiters = new string[] {","};
 
-            bool customDelimiter = false;
+            int customDelimiters = 0;
             if (numbers.Substring(0,2) == "//")
             {
                 //find the first newline and take everything before it
-                string newDelimiter = numbers.Split('\n')[0];
+                string newDelimiters = numbers.Split('\n')[0];
                 //remove the slashes from the delimiter
-                delimiter[0] = newDelimiter.Substring(2);
-                customDelimiter = true;
+                newDelimiters = newDelimiters.Substring(2);
+                //get all the delimiters
+                delimiters = newDelimiters.Split(delimiters,StringSplitOptions.RemoveEmptyEntries);
+                
+                customDelimiters = delimiters.Count();
             }
             
             //splitting up the string using the delimiter
-            string[] individualNumbers = numbers.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
+            string[] individualNumbers = numbers.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
 
+            
+            
             int index = 0;
-
-            if (customDelimiter)
+            //skipping the first to avoid parsing the slashes as a number, and every comma from the delimiters
+            for (int i = 0; i < customDelimiters; i++)
             {
-                //skipping the first to avoid parsing the slashes as a number
-                index = 1;
+                index++;
             }
+            
 
             //a place to store the negative numbers to display
             LinkedList<int> negatives = new LinkedList<int>();
