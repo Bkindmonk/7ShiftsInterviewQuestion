@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SevenShiftsInterview
 {
@@ -11,6 +12,7 @@ namespace SevenShiftsInterview
                 TestAddQuestion1();
                 TestAddQuestion2();
                 TestAddQuestion3();
+                TestAddQuestion4();
             }
             catch (Exception e)
             {
@@ -96,7 +98,7 @@ namespace SevenShiftsInterview
             catch (Exception e)
             {
                 //if the message is not exactly this, fail the case
-                case2 = e.Message.Equals("Negatives not allowed: -3");
+                case2 = e.Message.Equals("Negatives not allowed: -22,-3,-4");
             }
             
             if(!case1){throw new Exception("Test4 case1 failed");}
@@ -136,12 +138,39 @@ namespace SevenShiftsInterview
                 //skipping the first to avoid parsing the slashes as a number
                 index = 1;
             }
+
+            //a place to store the negative numbers to display
+            LinkedList<int> negatives = new LinkedList<int>();
             
             for (;index < individualNumbers.Length; index++)
             {
                 string num = individualNumbers[index];
                 int interpreted = int.Parse(num);
                 sum += interpreted;
+                
+                if (interpreted < 0)
+                {
+                    negatives.AddLast(interpreted);
+                }
+            }
+
+            //if there are any negatives in the sum, throw an exception and list the negative numbers
+            if (negatives.Count > 0)
+            {
+                string invalidNumbers = "";
+                int count = 0;
+                foreach (int neg in negatives)
+                {
+                    invalidNumbers += neg.ToString();
+                    
+                    //add a comma after all but the last one
+                    if (count < (negatives.Count - 1))
+                    {
+                        invalidNumbers += ",";
+                    }
+                    count++;
+                }
+                throw new Exception("Negatives not allowed: "+invalidNumbers);
                 
             }
             
