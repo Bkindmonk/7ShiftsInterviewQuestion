@@ -15,6 +15,7 @@ namespace SevenShiftsInterview
                 TestAddQuestion4();
                 TestAddBonus1();
                 TestAddBonus2();
+                TestAddBonus3();
             }
             catch (Exception e)
             {
@@ -126,7 +127,19 @@ namespace SevenShiftsInterview
             bool case1 = (Add("//;;;\n1001;;;1;;;3;;;4;;;1002;;;3000") == 8);
             
             //Testing mixed symbols delimiter
-            bool case2 = (Add("//:+,=;\n1001:+,=;1:+,=;3:+,=;4:+,=;1002:+,=;3000") == 8);
+            bool case2 = (Add("//.+.=:\n1001.+.=:1.+.=:3.+.=:4.+.=:1002.+.=:3000") == 8);
+            
+            if(!case1){throw new Exception("Bonus1 case1 failed");}
+            if(!case2){throw new Exception("Bonus1 case2 failed");}
+        }
+
+        private static void TestAddBonus3()
+        {
+            //Allow for multiple delimiters
+            bool case1 = (Add("//;;;,:::\n1001;;;1:::3;;;4;;;1002:::3000") == 8);
+            
+            //Test mixed symbol multiple delimiters
+            bool case2 = (Add("//.+.=:,$%,#@\n1001.+.=:1;;;3$%4;;;1002#@3000") == 8);
             
             if(!case1){throw new Exception("Bonus1 case1 failed");}
             if(!case2){throw new Exception("Bonus1 case2 failed");}
