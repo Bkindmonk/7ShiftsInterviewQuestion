@@ -68,6 +68,41 @@ namespace SevenShiftsInterview
             if(!case1){throw new Exception("Test3 case1 failed");}
             if(!case2){throw new Exception("Test3 case2 failed");}
         }
+
+        private static void TestAddQuestion4()
+        {
+            //Calling add with a negative number should throw an exception
+            bool case1 = true;
+            try
+            {
+                Add("1,2,-3,4");
+                //if no exception is thrown, fail the case
+                case1 = false;
+            }
+            catch (Exception e)
+            {
+                //if the message is not exactly this, fail the case
+                case1 = e.Message.Equals("Negatives not allowed: -3");
+            }
+            
+            //Testing two digits negative numbers and multiple negative numbers
+            bool case2 = true;
+            try
+            {
+                Add("1,-22,-3,-4");
+                //if no exception is thrown, fail the case
+                case2 = false;
+            }
+            catch (Exception e)
+            {
+                //if the message is not exactly this, fail the case
+                case2 = e.Message.Equals("Negatives not allowed: -3");
+            }
+            
+            if(!case1){throw new Exception("Test4 case1 failed");}
+            if(!case2){throw new Exception("Test4 case2 failed");}
+            
+        }
         
         private static int Add(string numbers)
         {
