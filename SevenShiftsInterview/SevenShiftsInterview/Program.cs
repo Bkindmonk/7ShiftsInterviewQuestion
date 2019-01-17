@@ -9,6 +9,7 @@ namespace SevenShiftsInterview
             try
             {
                 TestAddQuestion1();
+                TestAddQuestion2();
             }
             catch (Exception e)
             {
@@ -30,11 +31,32 @@ namespace SevenShiftsInterview
             
             //Testing single number strings
             bool case4 = (Add("500") == 500);
+            
+            //Testing zeroes in numbers
+            bool case5 = (Add("1,0,2,0,3,0,0,4") == 10);
 
             if(!case1){throw new Exception("Test1 case1 failed");}
             if(!case2){throw new Exception("Test1 case2 failed");}
             if(!case3){throw new Exception("Test1 case3 failed");}
             if(!case4){throw new Exception("Test1 case4 failed");}
+            if(!case5){throw new Exception("Test1 case5 failed");}
+        }
+
+        private static void TestAddQuestion2()
+        {
+            //handle new lines in the input format
+            //Testing New lines in all positions and next to multi-digit numbers
+            bool case1 = (Add("1\n,2,3") == 6);
+            bool case2 = (Add("3,4\n,5") == 12);
+            bool case3 = (Add("6,7,8\n") == 21);
+            bool case4 = (Add("60\n,7,8") == 75);
+            
+            
+            
+            if(!case1){throw new Exception("Test2 case1 failed");}
+            if(!case2){throw new Exception("Test2 case2 failed");}
+            if(!case3){throw new Exception("Test2 case3 failed");}
+            if(!case4){throw new Exception("Test2 case4 failed");}
         }
         
         private static int Add(string numbers)
