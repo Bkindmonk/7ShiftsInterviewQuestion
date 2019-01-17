@@ -13,6 +13,7 @@ namespace SevenShiftsInterview
                 TestAddQuestion2();
                 TestAddQuestion3();
                 TestAddQuestion4();
+                TestAddBonus1();
             }
             catch (Exception e)
             {
@@ -105,7 +106,16 @@ namespace SevenShiftsInterview
             if(!case2){throw new Exception("Test4 case2 failed");}
             
         }
-        
+
+        private static void TestAddBonus1()
+        {
+            //Numbers larger than 1000 should be ignored
+            bool case1 = (Add("//;\n1001;1;3;4;1002;3000") == 8);
+            
+            //1000 should still count
+            bool case2 = (Add("//j\n1j3j4;1000;1001") == 1008);
+            
+        }
         private static int Add(string numbers)
         {
             //Empty strings should return 0
