@@ -159,6 +159,13 @@ namespace SevenShiftsInterview
                 
                 string num = individualNumbers[index];
                 int interpreted = int.Parse(num);
+
+                //ignore numbers above 1000
+                if (interpreted > 1000)
+                {
+                    continue;
+                }
+                
                 sum += interpreted;
                 
                 if (interpreted < 0)
