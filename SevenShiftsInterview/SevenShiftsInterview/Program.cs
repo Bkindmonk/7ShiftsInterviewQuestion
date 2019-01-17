@@ -147,17 +147,24 @@ namespace SevenShiftsInterview
         }
         private static int Add(string numbers)
         {
+            int sum = 0;
+            int customDelimiters = 0;
+            
+            //a place to store the negative numbers to display
+            LinkedList<int> negatives = new LinkedList<int>();
+        
             //Empty strings should return 0
             if (string.IsNullOrEmpty(numbers))
             {
                 return 0;
             }
             
-            int sum = 0;
+            
             //default delimiter is comma
             string[] delimiters = new string[] {","};
 
-            int customDelimiters = 0;
+            
+            
             if (numbers.Substring(0,2) == "//")
             {
                 //find the first newline and take everything before it
@@ -181,10 +188,6 @@ namespace SevenShiftsInterview
             {
                 index++;
             }
-            
-
-            //a place to store the negative numbers to display
-            LinkedList<int> negatives = new LinkedList<int>();
             
             for (;index < individualNumbers.Length; index++)
             {
