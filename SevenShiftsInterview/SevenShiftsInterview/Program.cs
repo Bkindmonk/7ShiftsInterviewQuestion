@@ -10,6 +10,7 @@ namespace SevenShiftsInterview
             {
                 TestAddQuestion1();
                 TestAddQuestion2();
+                TestAddQuestion3();
             }
             catch (Exception e)
             {
@@ -57,6 +58,15 @@ namespace SevenShiftsInterview
             if(!case2){throw new Exception("Test2 case2 failed");}
             if(!case3){throw new Exception("Test2 case3 failed");}
             if(!case4){throw new Exception("Test2 case4 failed");}
+        }
+
+        private static void TestAddQuestion3()
+        {
+            bool case1 = (Add("//;\n1;3;4") == 7);
+            bool case2 = (Add("//j\n1j3j4") == 7);
+            
+            if(!case1){throw new Exception("Test3 case1 failed");}
+            if(!case2){throw new Exception("Test3 case2 failed");}
         }
         
         private static int Add(string numbers)
