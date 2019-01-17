@@ -62,8 +62,8 @@ namespace SevenShiftsInterview
 
         private static void TestAddQuestion3()
         {
-            bool case1 = (Add("//;\n1;3;4") == 7);
-            bool case2 = (Add("//j\n1j3j4") == 7);
+            bool case1 = (Add("//;\n1;3;4") == 8);
+            bool case2 = (Add("//j\n1j3j4") == 8);
             
             if(!case1){throw new Exception("Test3 case1 failed");}
             if(!case2){throw new Exception("Test3 case2 failed");}
@@ -78,14 +78,38 @@ namespace SevenShiftsInterview
             }
             
             int sum = 0;
-            
-            string[] individualNumbers = numbers.Split(',');
-            
-            foreach (string num in individualNumbers)
+            //default delimiter is comma
+            string[] delimiter = new string[] {","};
+
+            bool customDelimiter = false;
+            if (numbers.Substring(0,2) == "//")
             {
+                //find the first newline and take everything before it
+                string newDelimiter = numbers.Split('\n')[0];
+                //remove the slashes from the delimiter
+                delimiter[0] = newDelimiter.Substring(2);
+                customDelimiter = true;
+            }
+            
+            //splitting up the string using the delimiter
+            string[] individualNumbers = numbers.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
+
+            int index = 0;
+
+            if (customDelimiter)
+            {
+                //skipping the first to avoid parsing the slashes as a number
+                index = 1;
+            }
+            
+            for (;index < individualNumbers.Length; index++)
+            {
+                string num = individualNumbers[index];
                 int interpreted = int.Parse(num);
                 sum += interpreted;
+                
             }
+            
             return sum;
         }
     }
