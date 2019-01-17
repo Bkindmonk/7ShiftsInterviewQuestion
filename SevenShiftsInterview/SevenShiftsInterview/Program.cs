@@ -130,8 +130,8 @@ namespace SevenShiftsInterview
             //Testing mixed symbols delimiter
             bool case2 = (Add("//.+.=:\n1001.+.=:1.+.=:3.+.=:4.+.=:1002.+.=:3009") == 8);
             
-            if(!case1){throw new Exception("Bonus1 case1 failed");}
-            if(!case2){throw new Exception("Bonus1 case2 failed");}
+            if(!case1){throw new Exception("Bonus2 case1 failed");}
+            if(!case2){throw new Exception("Bonus2 case2 failed");}
         }
 
         private static void TestAddBonus3()
@@ -142,8 +142,8 @@ namespace SevenShiftsInterview
             //Test mixed symbol multiple delimiters Which is also Bonus Question 4
             bool case2 = (Add("//.+.=:,$%,#@\n1999.+.=:1.+.=:3$%4.+.=:1998#@9000") == 8);
             
-            if(!case1){throw new Exception("Bonus1 case1 failed");}
-            if(!case2){throw new Exception("Bonus1 case2 failed");}
+            if(!case1){throw new Exception("Bonus3 case1 failed");}
+            if(!case2){throw new Exception("Bonus3 case2 failed");}
         }
         private static int Add(string numbers)
         {
